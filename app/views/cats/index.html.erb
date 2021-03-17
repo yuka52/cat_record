@@ -1,0 +1,19 @@
+<%= render "shared/header" %> 
+<div class="cat-lists">
+  <%# <% if @cats.present? %> 
+   <div class="cat-list">
+        <%# <% @cats.each do |cat| %> 
+            <%= link_to "/" , class: "cat-link" do %>
+              <div class='cat-img-content'>
+                <%= image_tag "S__12861507.jpg", class: "cat-img" %>
+              </div>
+              <div class='cat-info'>
+                <h3 class='cat-name'>
+                  <%= "くるみ" %>
+                </h3>
+              </div>
+            <% end %>    
+        <%# <%end%>   
+    </div> 
+  <%# <% end %>    
+</div>
