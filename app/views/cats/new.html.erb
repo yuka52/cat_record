@@ -1,0 +1,74 @@
+<%= render "shared/header" %> 
+
+<div class="cats-profile-main">
+  <div class="cats-profile-contents">
+    <h2 class="cats-profile-title">プロフィールを入力</h2>
+    <%= form_with model:@cat, local: true do |f| %>
+
+    <%# <%= render 'shared/error_messages', model: f.object %>
+
+    <%# 写真 %>
+    <div class="img-upload">
+      <div class="weight-bold-text">
+        写真
+        <span class="indispensable">必須</span>
+      </div>
+      <div class="click-upload">
+        <p>
+          クリックして写真をアップロード
+        </p>
+        <%= f.file_field :image, class:"cat-image", id:"item-image" %>
+      </div>
+    </div>
+    <%# /写真 %>
+    <%# プロフィール %>
+    <div class="cat-name-form">
+      <div class="weight-bold-text">
+        名前
+        <span class="indispensable">必須</span>
+      </div>
+      <%= f.text_field :name, class:"cat-name-input" %>
+    </div>
+    <div class="cat-birthday">
+      <div class="weight-bold-text">
+          お誕生日
+        <span class="indispensable">必須</span>
+      </div>
+      <div class='input-birth-wrap'>
+        <%= raw sprintf(
+                      f.date_select(
+                        :birthday,
+                        class:'select-birth',
+                        id:"birth-date",
+                        use_month_numbers: true,
+                        prompt:'--',
+                        start_year: 1985,
+                        end_year: (Time.now.year),
+                        date_separator: '%s'),
+                      "<p> 年 </p>", "<p> 月 </p>") + "<p> 日 </p>" %>
+      </div>
+    </div>
+    <div class="cat-gender">
+      <div class="weight-bold-text">
+       性別
+          <span class="indispensable">必須</span>
+        </div>
+        <%= f.collection_select(:gender_id, Gender.all, :id, :name, {}, {class:"select-box", id:"item-category"}) %> 
+      </div>
+    <div class="cat-favorite">
+      <div class="weight-bold-text">
+        好きなもの
+        <span class="indispensable">必須</span>
+      </div>
+      <%= f.text_field :favorite, class:"favorite-input", id:"item-price" %>
+    </div>    
+    <%# /プロフィール %>
+
+    <div class="sell-btn-contents">
+      <%= f.submit "登録する" ,class:"sell-btn" %>
+      <%=link_to 'もどる', root_path, class:"back-btn" %>
+    </div>
+    <%# /下部ボタン %>
+  </div>
+  <% end %>
+</div>

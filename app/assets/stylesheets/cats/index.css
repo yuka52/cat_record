@@ -11,16 +11,13 @@
 
 .cat-img {
   margin: 20px auto;
+  border-radius: 15%;
+  height: 380px;
 }
 
 .cat-img-content {
   display: flex;
   justify-content: space-around;
-}
-
-.cat-img {
-  height: 400px;
-  
 }
 
 .cat-link {
@@ -29,8 +26,9 @@
 
 .cat-name {
   color: black;
-  font-size: 25px;
+  font-size: 20px;
   text-align: center;
+  font-weight: bold;
 }
 
 .cat-health {
