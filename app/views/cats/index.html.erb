@@ -5,7 +5,7 @@
       <div class="cat-list">
         <%= link_to "/" , class: "cat-link" do %>
           <div class='cat-img-content'>
-            <%= image_tag "S__12861507.jpg", class: "cat-img" %>
+            <%= image_tag cat.image.variant(resize: '400x380'), class: "cat-img" if cat.image.attached? %>
           </div>
           <div class='cat-info'>
             <h3 class='cat-name'>
