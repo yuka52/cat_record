@@ -1,0 +1,74 @@
+<%= render "shared/header" %> 
+
+<div class="cat-health-main">
+  <div class="cat-health-contents">
+    <h2 class="cat-health-title">どんぐりの記録をつける</h2>
+    <%= form_with  local: true do |f| %>
+
+    <%# <%= render 'shared/error_messages', model: f.object %>
+
+    <%# プロフィール %>
+    <div class="health-date">
+      <div class="weight-bold-text">
+        日付
+        <span class="indispensable">必須</span>
+      </div>
+      <%= f.date_field :created_at, class: 'date-input' %>
+    </div>
+    <div class="health-food">
+      <div class="weight-bold-text">
+        ごはん
+          <span class="indispensable">必須</span>
+      </div>
+        <%= f.collection_select(:food_id, Food.all, :id, :name, {}, {class:"health-select-box"}) %> 
+    </div>
+    <div class="health-tulle">
+      <div class="weight-bold-text">
+       ちゅーる
+          <span class="indispensable">必須</span>
+      </div>
+        <%= f.collection_select(:tulle_id, Tulle.all, :id, :name, {}, {class:"health-select-box"}) %> 
+    </div>
+    <div class="health-play">
+      <div class="weight-bold-text">
+       遊び・運動
+          <span class="indispensable">必須</span>
+      </div>
+        <%= f.collection_select(:play_id, Play.all, :id, :name, {}, {class:"health-select-box"}) %> 
+    </div>
+    <div class="health-weight">
+      <div class="weight-bold-text">
+        体重
+      </div>
+      <%= f.text_field :weight, class:"weight-input" %>
+    </div>
+    <div class="health-poop">
+      <div class="weight-bold-text">
+       うんち
+          <span class="indispensable">必須</span>
+      </div>
+        <%= f.collection_select(:poop_id, Poop.all, :id, :name, {}, {class:"health-select-box"}) %> 
+    </div>
+    <div class="health-pee">
+      <div class="weight-bold-text">
+       おしっこ
+          <span class="indispensable">必須</span>
+      </div>
+        <%= f.collection_select(:pee_id, Pee.all, :id, :name, {}, {class:"health-select-box"}) %> 
+    </div>
+    <div class="health-comment">
+      <div class="weight-bold-text">
+        コメント
+      </div>
+      <%= f.text_area :comment, class:"comment-input" %>
+    </div>    
+    <%# /プロフィール %>
+
+    <div class="sell-btn-contents">
+      <%= f.submit "登録する" ,class:"sell-btn" %>
+      <%=link_to 'もどる', root_path, class:"back-btn" %>
+    </div>
+    <%# /下部ボタン %>
+  </div>
+   <% end %>
+</div>
