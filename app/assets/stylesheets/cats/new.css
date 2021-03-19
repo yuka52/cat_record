@@ -1,0 +1,161 @@
+
+.cats-profile-contents { 
+  height: 920px;
+  width: 300px;
+  background-color: rgb(241, 236, 236);
+  margin: 30px auto;
+  padding: 60px 90px;
+  border-radius: 4px;
+}
+
+.cats-profile-title {
+  font-size: 25px;
+  font-weight: bold;
+  display: block;
+  text-align: center;
+  padding-bottom: 10px;
+  margin-bottom: 50px;
+  letter-spacing: 3px;
+}
+
+/* 共通 */
+.indispensable {
+  background: #518d7e;
+  margin-left: 8px;
+  padding: 3px;
+  border-radius: 2px;
+  color: #fff;
+  font-size: 12px;
+  font-weight: bold;
+}
+
+.weight-bold-text {
+  font-weight: bold;
+  min-width: 170px;
+  margin-bottom: 10px;
+}
+
+.select-box {
+  height: 40px;
+  width: 100%;
+  background-color: #f5f5f5;
+  padding-left: 20px;
+}
+
+/* /共通 */
+
+/* 出品画像 */
+.img-upload {
+  margin-bottom: 50px;
+}
+
+.click-upload {
+  font-size: 15px;
+  margin: 10px 0;
+  min-width: 250px;
+}
+
+.click-upload>p {
+  margin-bottom: 10px;
+}
+
+/* /写真 */
+
+/* プロフィール */
+
+.cat-name-form {
+  margin-bottom: 50px;
+}
+
+.cat-name-input {
+  width: 80%;
+  height: 20px;
+  padding: 16px 16px 8px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  margin-bottom: 20px;
+  font-size: 15px;
+  background-color: white;
+}
+
+.cat-birthday {
+  margin-bottom: 50px;
+}
+
+.input-birth-wrap {
+  display: flex;
+}
+
+.input-birth-wrap select {
+  width: 65px;
+  margin-top: 5px;
+  height: 45px;
+  padding-left: 10px;
+  border-radius: 4px;
+  border: 1px solid #ccc;
+  background: #fff;
+  font-size: 12px;
+  cursor: pointer;
+}
+
+.input-birth-wrap p {
+  line-height: 60px;
+  padding: 0 5px;
+}
+
+.cat-gender {
+  margin-bottom: 50px;
+}
+
+.select-box {
+  width: 120px;
+  margin-top: 5px;
+  height: 45px;
+  border-radius: 4px;
+  border: 1px solid #ccc;
+  background: #fff;
+  font-size: 14px;
+  cursor: pointer;
+}
+
+.cat-favorite { 
+  margin-bottom: 50px;
+}
+
+.favorite-input {
+  width: 80%;
+  height: 20px;
+  padding: 16px 16px 8px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  margin-bottom: 20px;
+}
+
+/* /プロフィール */
+
+/* 下部ボタン */
+.sell-btn-contents {
+  text-align: center;
+}
+
+.sell-btn {
+  background: #518d7e;
+  border: 1px solid #518d7e;
+  color: #fff;
+  width: 100%;
+  height: 50px;
+  font-size: 14px;
+  margin-bottom: 20px;
+  border-radius: 4px;
+}
+
+.back-btn {
+  background: #aaa;
+  border: 1px solid #aaa;
+  color: #fff;
+  padding: 15px 35%;
+  text-decoration: none;
+  border-radius: 4px;
+}
+
+

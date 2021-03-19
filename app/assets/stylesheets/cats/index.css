@@ -1,0 +1,40 @@
+.cat-lists {
+  height: 100vh-100px;
+}
+
+.cat-list { 
+  height: 500px;
+  width: 450px;
+  background-color: rgb(241, 236, 236);
+  margin: 50px auto;
+}
+
+.cat-img {
+  margin: 20px auto;
+  border-radius: 15%;
+}
+
+.cat-img-content {
+  display: flex;
+  justify-content: space-around;
+}
+
+.cat-link {
+ text-decoration: none;
+}
+
+.cat-name {
+  color: black;
+  font-size: 20px;
+  text-align: center;
+  font-weight: bold;
+}
+
+.cat-health {
+  text-decoration: none;
+  color: black;
+  display: block;
+  text-align: center;
+}
+
+
