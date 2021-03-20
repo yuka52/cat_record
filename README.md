@@ -34,9 +34,10 @@
 | food_id   | integer    | null: false                    |
 | tulle_id  | integer    | null: false                    |
 | play_id   | integer    | null: false                    |
+| weight    | integer    |                                |
 | poop_id   | integer    | null: false                    |
 | pee_id    | integer    | null: false                    |
-| comment   | string     | null: false                    |
+| comment   | string     |                                |
 | cat       | references | null: false, foreign_key: true |
 
 ### Association

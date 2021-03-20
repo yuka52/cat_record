@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2021_03_19_020934) do
+ActiveRecord::Schema.define(version: 2021_03_19_103435) do
 
   create_table "active_storage_attachments", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8", force: :cascade do |t|
     t.string "name", null: false
@@ -40,6 +40,21 @@ ActiveRecord::Schema.define(version: 2021_03_19_020934) do
     t.integer "gender_id", null: false
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
+  end
+
+  create_table "healths", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8", force: :cascade do |t|
+    t.date "recorded_date", null: false
+    t.integer "food_id", null: false
+    t.integer "tulle_id", null: false
+    t.integer "play_id", null: false
+    t.integer "weight"
+    t.integer "poop_id", null: false
+    t.integer "pee_id", null: false
+    t.bigint "cat_id", null: false
+    t.datetime "created_at", precision: 6, null: false
+    t.datetime "updated_at", precision: 6, null: false
+    t.string "comment"
+    t.index ["cat_id"], name: "index_healths_on_cat_id"
   end
 
   add_foreign_key "active_storage_attachments", "active_storage_blobs", column: "blob_id"
