@@ -2,18 +2,30 @@
 
 <div class="cat-health-main">
   <div class="cat-health-contents">
-    <h2 class="cat-health-title">どんぐりの記録をつける</h2>
-    <%= form_with  local: true do |f| %>
+    <h2 class="cat-health-title">記録をつける</h2>
+    <%= form_with model:@health, local: true do |f| %>
 
     <%# <%= render 'shared/error_messages', model: f.object %>
 
     <%# プロフィール %>
+    <div class="cat-select">
+      <div class="weight-bold-text">
+        誰の記録ですか？
+        <span class="indispensable">必須</span>
+      </div>
+      <select class="health-select-box", name="health[cat_id]">
+        <option value="">ねこを選ぶ</option>
+          <% Cat.all.each do |cat| %>
+            <option value=<%= cat.id %>><%= cat.name %></option>
+          <% end %>
+      </select>
+    </div>
     <div class="health-date">
       <div class="weight-bold-text">
         日付
         <span class="indispensable">必須</span>
       </div>
-      <%= f.date_field :created_at, class: 'date-input' %>
+      <%= f.date_field :recorded_date, class: 'date-input' %>
     </div>
     <div class="health-food">
       <div class="weight-bold-text">

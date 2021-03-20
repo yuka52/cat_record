@@ -1,5 +1,5 @@
 .cat-health-contents { 
-  height: 1220px;
+  height: 1320px;
   width: 300px;
   background-color: rgb(241, 236, 236);
   margin: 30px auto;
@@ -45,6 +45,9 @@
 /* /共通 */
 
 /* 記録入力 */
+.cat-select { 
+  margin-bottom: 50px;
+}
 
 .health-date {
   margin-bottom: 50px;
