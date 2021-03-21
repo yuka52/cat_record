@@ -1,0 +1,197 @@
+.profile-health {
+  margin-top: 60px;
+}
+
+.cat-record-title {
+  height: 80px;
+  width: 100%;
+  padding: 25px 75px 25px 95px;
+  font-size: 20px;
+  font-weight: bold;
+  display: flex;
+  justify-content: space-between;
+}
+
+.record-title {
+  font-weight: bold;
+}
+
+.cat-record-contents {
+  display: flex;
+}
+
+.cat-profile-column {
+  width: 30%;
+  height: 700px;
+  padding-top: 70px;
+}
+
+.cat-info {
+  width: 70%;
+  height: 150px;
+  margin: 0 auto;
+}
+
+.profile-item-content {
+  padding-bottom: 4px;
+  padding-left: 20px;
+}
+
+.profile-item-text {
+  font-size: 18px;
+}
+
+.profile-item {
+  font-size: 15px;
+  padding-right: 10px;
+  font-weight: bold;
+}
+
+.profile-btn {
+  margin: auto;
+  padding-top: 35px;
+  width: 400px;
+}
+
+.profile-edit-btn {
+  text-decoration: none;
+  color: white;
+  font-weight: bold;
+  display: block;
+  width: 250px;
+  height: 35px;
+  border: gray solid 1px ;
+  background-color: gray;
+  box-shadow: 2px 2px 4px rgb(163, 162, 162);
+  padding: 7px;
+  text-align: center;
+  border-radius: 4px;
+  font-size: 14px;
+  margin-left: 20px;
+}
+
+.profile-edit-btn:hover {
+  opacity:0.8;
+}
+
+.profile-edit-btn:active {
+  -webkit-transform: translate(0,2px);
+	-moz-transform: translate(0,2px);
+	transform: translate(0,2px);
+	border-bottom:none;
+}
+
+.profile-delete-btn {
+  text-decoration: none;
+  color: white;
+  font-weight: bold;
+  display: block;
+  width: 225px;
+  height: 35px;
+  border: rgb(233, 113, 113) solid 1px;
+  background-color: rgb(233, 113, 113);
+  box-shadow: 2px 2px 4px rgb(163, 162, 162);
+  font-size: 14px;
+  text-align: center;
+  padding: 6px;
+  border-radius: 4px;
+  margin-top: 15px;
+  margin-left: 30px;
+}
+
+.profile-delete-btn:hover {
+  opacity:0.8;
+}
+
+.profile-delete-btn:active {
+  -webkit-transform: translate(0,2px);
+	-moz-transform: translate(0,2px);
+	transform: translate(0,2px);
+	border-bottom:none;
+}
+
+.cat-healths-table {
+  width: 70%;
+  text-align: center;
+}
+
+caption {
+  font-size: 25px;
+  font-weight: bold;
+  width: 100%;
+  text-align: center;
+  padding: 15px 0;
+}
+
+table{
+  width: 96%;
+  margin-top: 30px ;
+  padding: 0 15px;
+}
+
+th,td{
+  border:solid 2px #aaaaaa;
+  border-radius: 4px;
+}
+
+table th{
+  text-align: center;
+  padding : 20px 10px;
+  font-weight: bold;
+}
+
+table td{
+  
+  padding : 20px 10px;
+}
+
+.health-comment {
+  width: 20%;
+}
+
+table td a {
+  text-decoration: none;
+  color: white;
+  font-weight: bold;
+  display: block;
+  width: 40px;
+  height: 27px;
+  padding: 3px;
+  text-align: center;
+  border-radius: 10px;
+  font-size: 14px;
+}
+
+.health-edit-btn {
+  border: gray solid 1px ;
+  background-color: gray;
+  box-shadow: 2px 2px 4px rgb(163, 162, 162);
+}
+
+.health-edit-btn:hover {
+  opacity:0.8;
+}
+
+.health-edit-btn:active {
+  -webkit-transform: translate(0,2px);
+	-moz-transform: translate(0,2px);
+	transform: translate(0,2px);
+	border-bottom:none;
+}
+
+.health-delete-btn {
+  border: rgb(233, 113, 113) solid 1px ;
+  background-color: rgb(233, 113, 113);
+  box-shadow: 2px 2px 4px rgb(163, 162, 162);
+}
+
+.health-delete-btn:hover {
+  opacity:0.8;
+}
+
+.health-delete-btn:active {
+  -webkit-transform: translate(0,2px);
+	-moz-transform: translate(0,2px);
+	transform: translate(0,2px);
+	border-bottom:none;
+}

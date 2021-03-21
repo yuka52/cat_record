@@ -16,9 +16,21 @@ class CatsController < ApplicationController
     end
   end
 
+  def show
+    @cat = Cat.find(params[:id])
+
+    birthday = @cat.birthday.strftime("%Y%m%d").to_i
+    today = Date.today.strftime("%Y%m%d").to_i
+    @age = (today - birthday) / 10000
+
+    @health_data = Health.where(cat_id: @cat.id)
+
+  end
+
   private
 
   def cat_params
     params.require(:cat).permit(:name, :birthday, :gender_id, :favorite, :image)
   end
 end
+

@@ -1,0 +1,76 @@
+<%= render "shared/header" %>
+
+<div class="cat-record-main">
+  <div class="cat-record-contents">
+    <div class="cat-profile-column">
+      <div class='cat-img-content'>
+        <%= image_tag @cat.image.variant(resize: '400x380'), class: "cat-img" if @cat.image.attached? %>
+      </div>
+      <div class='cat-info'>
+        <div class="profile-item-content">
+          <div class="profile-item-text">
+             <span class="profile-item">名前</span>
+            <%= @cat.name %>
+          </div>
+        </div>
+        <div class="profile-item-content">
+          <div class="profile-item-text">
+              <span class="profile-item">性別</span>
+            <%= @cat.gender.name %>
+          </div>
+        </div>
+        <div class="profile-item-content">
+          <div class="profile-item-text">
+              <span class="profile-item">年齢</span>
+            <%= "#{@age}才" %>
+          </div>
+        </div>
+        <div class="profile-item-content">
+          <div class="profile-item-text">
+              <span class="profile-item">好きなもの</span>
+            <%= @cat.favorite %>
+          </div>
+        </div>
+        <div class="profile-btn">
+          <%=link_to 'プロフィールを編集する', root_path, class:"profile-edit-btn" %>
+          <%=link_to 'プロフィールと記録を削除する', root_path, class:"profile-delete-btn" %>
+        </div>
+      </div>
+    </div>
+    <div class="cat-healths-table">  
+        <table>
+          <caption><%= "#{@cat.name}の記録" %></caption>
+          <tr>
+            <th>日付</th>
+            <th>ごはん</th> 
+            <th>ちゅーる</th> 
+            <th>遊び</th> 
+            <th>うんち</th> 
+            <th>おしっこ</th> 
+            <th>体重</th> 
+            <th class="health-comment">コメント</th>
+            <th></th>
+            <th></th>
+          </tr>
+          <% @health_data.each do |data| %>
+           <tr>
+              <td><%= data.recorded_date %></td> 
+              <td><%= data.food.name %></td> 
+              <td><%= data.tulle.name %></td> 
+              <td><%= data.play.name %></td> 
+              <td><%= data.poop.name %></td> 
+              <td><%= data.pee.name %></td> 
+              <td>
+               <% if (data.weight).present? %>
+                <%= "#{data.weight}kg" %>
+               <% end %>
+              </td> 
+              <td class="health-comment"><%= data.comment %></td>
+              <td><%= link_to "編集", "#", class:"health-edit-btn" %></td>
+              <td><%= link_to "削除", "#", class:"health-delete-btn" %></td>
+           </tr>
+          <% end%>
+        </table>
+    </div>
+  </div>
+</div>
