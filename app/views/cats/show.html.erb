@@ -48,7 +48,7 @@
             <th>うんち</th> 
             <th>おしっこ</th> 
             <th>体重</th> 
-            <th class="health-comment">コメント</th>
+            <th class="table-comment">コメント</th>
             <th></th>
             <th></th>
           </tr>
@@ -65,8 +65,8 @@
                 <%= "#{data.weight}kg" %>
                <% end %>
               </td> 
-              <td class="health-comment"><%= data.comment %></td>
-              <td><%= link_to "編集", "#", class:"health-edit-btn" %></td>
+              <td class="table-comment"><%= data.comment %></td>
+              <td><%= link_to "編集", edit_health_path(data), class:"health-edit-btn" %></td>
               <td><%= link_to "削除", "#", class:"health-delete-btn" %></td>
            </tr>
           <% end%>

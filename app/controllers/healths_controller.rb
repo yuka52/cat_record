@@ -13,6 +13,19 @@ class HealthsController < ApplicationController
     end
   end
 
+  def edit
+    @health = Health.find(params[:id])
+  end
+
+  def update
+    @health = Health.find(params[:id])
+    if @health.update(health_params)
+      redirect_to  cat_path(@health.cat_id)
+    else
+      render :edit
+    end
+  end
+
   private
 
   def health_params
