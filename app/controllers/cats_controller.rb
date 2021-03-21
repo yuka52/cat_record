@@ -23,7 +23,7 @@ class CatsController < ApplicationController
     today = Date.today.strftime("%Y%m%d").to_i
     @age = (today - birthday) / 10000
 
-    @health_data = Health.where(cat_id: @cat.id)
+    @health_data = Health.where(cat_id: @cat.id).order(recorded_date: "DESC") 
 
   end
 
