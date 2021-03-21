@@ -1,6 +1,6 @@
 .cat-health-contents { 
   height: 1420px;
-  width: 35%;
+  width: 500px;
   background-color: rgb(241, 236, 236);
   margin: 30px auto;
   padding: 60px 90px;
@@ -9,7 +9,7 @@
 
 .cat-health-contents-edit { 
   height: 1350px;
-  width: 35%;
+  width: 500px;
   background-color: rgb(241, 236, 236);
   margin: 30px auto;
   padding: 60px 90px;
