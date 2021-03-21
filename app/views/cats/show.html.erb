@@ -39,7 +39,7 @@
         </div>
         <div class="profile-btn">
           <%=link_to 'プロフィールを編集する', edit_cat_path(@cat), class:"profile-edit-btn" %>
-          <%=link_to 'プロフィールと記録を削除する', root_path, class:"profile-delete-btn" %>
+          <%=link_to 'プロフィールと記録を削除する', cat_path(@cat), data: { confirm: 'プロフィルと記録を全て削除しますか？' }, method: :delete, class:"profile-delete-btn" %>
         </div>
       </div>
     </div>
