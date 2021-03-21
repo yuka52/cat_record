@@ -26,10 +26,17 @@ class HealthsController < ApplicationController
     end
   end
 
+  def destroy
+    health = Health.find(params[:id])
+    if health.destroy
+      redirect_to cat_path(health.cat_id)
+    end
+  end
+
   private
 
   def health_params
-    params.require(:health).permit(:recorded_date, :food_id, :tulle_id, :play_id, :weight, :poop_id, :pee_id, :coment, :cat_id)
+    params.require(:health).permit(:recorded_date, :food_id, :tulle_id, :play_id, :weight, :poop_id, :pee_id, :comment, :cat_id)
   end
 
 end

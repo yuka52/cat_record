@@ -67,7 +67,7 @@
               </td> 
               <td class="table-comment"><%= data.comment %></td>
               <td><%= link_to "編集", edit_health_path(data), class:"health-edit-btn" %></td>
-              <td><%= link_to "削除", "#", class:"health-delete-btn" %></td>
+              <td><%= link_to "削除", health_path(data), method: :delete, data: { confirm: '削除しますか？' }, class:"health-delete-btn" %></td>
            </tr>
           <% end%>
         </table>
