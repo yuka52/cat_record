@@ -21,6 +21,12 @@
         </div>
         <div class="profile-item-content">
           <div class="profile-item-text">
+              <span class="profile-item">誕生日</span>
+            <%= @cat.birthday.strftime("%Y年 %m月 %d日") %>
+          </div>
+        </div>
+        <div class="profile-item-content">
+          <div class="profile-item-text">
               <span class="profile-item">年齢</span>
             <%= "#{@age}才" %>
           </div>
@@ -32,7 +38,7 @@
           </div>
         </div>
         <div class="profile-btn">
-          <%=link_to 'プロフィールを編集する', root_path, class:"profile-edit-btn" %>
+          <%=link_to 'プロフィールを編集する', edit_cat_path(@cat), class:"profile-edit-btn" %>
           <%=link_to 'プロフィールと記録を削除する', root_path, class:"profile-delete-btn" %>
         </div>
       </div>
@@ -54,7 +60,7 @@
           </tr>
           <% @health_data.each do |data| %>
            <tr>
-              <td><%= data.recorded_date %></td> 
+              <td class="table-date"><%= data.recorded_date.strftime("%Y年 %m月 %d日") %></td> 
               <td><%= data.food.name %></td> 
               <td><%= data.tulle.name %></td> 
               <td><%= data.play.name %></td> 
