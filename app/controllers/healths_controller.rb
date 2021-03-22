@@ -1,4 +1,6 @@
 class HealthsController < ApplicationController
+  before_action :authenticate_user!
+
   def new
    @health = Health.new
    @cats = Cat.all

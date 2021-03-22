@@ -1,0 +1,30 @@
+<div class="contents row">
+  <div class="contents-title">
+    <h1>うちの子の記録</h1>
+  </div>
+  <div class="container">
+    <h2>ログイン</h2>
+    <%= form_with model: @user, url: user_session_path, id: 'new_user', class: 'new_user', local: true do |f| %>
+      <div class="field">
+        <%= f.label :メールアドレス %><br />
+        <%= f.email_field :email, autofocus: true, class:"user-input-field" %>
+      </div>
+
+      <div class="field">
+        <%= f.label :パスワード %><br />
+        <%= f.password_field :password, autocomplete: "off", class:"user-input-field" %>
+      </div>
+
+      <% if devise_mapping.rememberable? %>
+        <div class="field">
+          <%= f.check_box :remember_me %>
+          <%= f.label :ログイン状態を保存する %>
+        </div>
+      <% end -%>
+
+      <div class="actions">
+        <%= f.submit "ログインする", class:"user-submit" %>
+      </div>
+    <% end %>
+  </div>
+</div>

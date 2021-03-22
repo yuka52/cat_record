@@ -3,13 +3,13 @@
   <% @cats.each do |cat| %> 
     <div class="cat-lists">
       <div class="cat-list">
-        <%= link_to "/" , class: "cat-link" do %>
+        <%= link_to cat_path(cat), class: "cat-link" do %>
           <div class='cat-img-content'>
-            <%= image_tag cat.image.variant(resize: '400x380'), class: "cat-img" if cat.image.attached? %>
+            <%= image_tag cat.image, class: "cat-img" %>
           </div>
           <div class='cat-info'>
             <h3 class='cat-name'>
-              <%= cat.name %>
+              <%= link_to "#{cat.name}の記録をみる", cat_path(cat), class: "cat-name-tag" %>
             </h3>
           </div>
         <% end %> 

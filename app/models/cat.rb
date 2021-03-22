@@ -3,6 +3,7 @@ class Cat < ApplicationRecord
   belongs_to :gender
   has_one_attached :image
   has_many :healths, dependent: :destroy
+  belongs_to :user
 
   validates :name, :birthday, :image, presence: true
 

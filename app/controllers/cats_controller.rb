@@ -1,6 +1,8 @@
 class CatsController < ApplicationController
+  before_action :authenticate_user!
+
   def index
-    @cats = Cat.all
+    @cats = Cat.where(user_id: current_user.id)
   end
 
   def new
@@ -42,14 +44,15 @@ class CatsController < ApplicationController
 
   def destroy
     cat = Cat.find(params[:id])
-    cat.destroy
-    redirect_to root_path
+    if cat.destroy
+     redirect_to root_path
+    end
   end
 
   private
 
   def cat_params
-    params.require(:cat).permit(:name, :birthday, :gender_id, :favorite, :image)
+    params.require(:cat).permit(:name, :birthday, :gender_id, :favorite, :image).merge(user_id: current_user.id)
   end
 end
 
