@@ -2,7 +2,7 @@ class CatsController < ApplicationController
   before_action :authenticate_user!
 
   def index
-    @cats = Cat.where(user_id: current_user.id)
+      @cats = Cat.where(user_id: current_user.id)
   end
 
   def new

@@ -15,7 +15,7 @@
       </div>
       <select class="health-select-box", name="health[cat_id]">
         <option value="">ねこを選ぶ</option>
-          <% Cat.all.each do |cat| %>
+          <% @cats.each do |cat| %>
             <option value=<%= cat.id %>><%= cat.name %></option>
           <% end %>
       </select>
