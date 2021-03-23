@@ -23,7 +23,10 @@
       <% end -%>
 
       <div class="actions">
-        <%= f.submit "ログインする", class:"user-submit" %>
+        <%= f.submit "ログインする", class: "user-submit" %>   
+      </div>
+      <div class="sign-up">
+        <%= link_to "新規登録はこちら", new_user_registration_path, class: "sign-up-btn" %>
       </div>
     <% end %>
   </div>
