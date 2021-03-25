@@ -3,7 +3,6 @@ class HealthsController < ApplicationController
 
   def new
    @health = Health.new
-   @cats = Cat.where(user_id: current_user.id)
   end
 
   def create
