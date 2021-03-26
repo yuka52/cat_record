@@ -1,9 +1,6 @@
 
 
-# アプリケーション名
-
-
-  ## 『うちの子の記録』
+#  『うちの子の記録』
 
 <img width="1000" alt="スクリーンショット 2021-03-26 19 15 20" src="https://user-images.githubusercontent.com/78485957/112617042-ca324580-8e67-11eb-85ae-c2f86513db54.png">
 
