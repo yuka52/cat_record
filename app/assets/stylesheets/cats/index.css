@@ -12,9 +12,13 @@
 
 .cat-img {
   margin: 20px auto;
-  border-radius: 15%;
-  height: 380px;
-  width: 330px;
+  border-radius: 5%;
+  height: 390px;
+  width: 310px;
+}
+
+.cat-img:hover {
+  opacity:0.8;
 }
 
 .cat-img-content {
@@ -35,6 +39,10 @@
 .cat-name-tag {
   text-decoration: none;
   color: black;
+}
+
+.cat-name-tag:hover{
+  text-decoration: none;
 }
 
 .cat-health {

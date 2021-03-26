@@ -55,6 +55,8 @@
 
 .profile-edit-btn:hover {
   opacity:0.8;
+  text-decoration: none;
+  color: white;
 }
 
 .profile-edit-btn:active {
@@ -80,10 +82,13 @@
   border-radius: 4px;
   margin-top: 15px;
   margin-left: 30px;
+  margin-bottom: 50px;
 }
 
 .profile-delete-btn:hover {
   opacity:0.8;
+  text-decoration: none;
+  color: white;
 }
 
 .profile-delete-btn:active {
@@ -157,6 +162,8 @@ table td a {
 
 .health-edit-btn:hover {
   opacity:0.8;
+  text-decoration: none;
+  color: white;
 }
 
 .health-edit-btn:active {
@@ -174,6 +181,8 @@ table td a {
 
 .health-delete-btn:hover {
   opacity:0.8;
+  text-decoration: none;
+  color: white;
 }
 
 .health-delete-btn:active {
@@ -181,4 +190,20 @@ table td a {
 	-moz-transform: translate(0,2px);
 	transform: translate(0,2px);
 	border-bottom:none;
+}
+
+/* ページネーション */
+
+.pagination>li>a {          
+  border: none;    
+  color: #696969;   
+}
+
+.pagination>.active>a {     
+  background: #93c9ff;     
+  border-radius: 15px;     
+}
+
+.pagination>li>a:hover {        
+  border-radius: 15px;  
 }
