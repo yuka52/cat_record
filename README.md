@@ -68,7 +68,6 @@
 
 ## データベース設計
 
-
 ![cat_record](https://user-images.githubusercontent.com/78485957/112101642-58999380-8bea-11eb-9b91-27f886582143.png)
 
 
