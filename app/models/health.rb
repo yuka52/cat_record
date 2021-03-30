@@ -7,6 +7,8 @@ class Health < ApplicationRecord
   belongs_to :pee
   belongs_to :cat
 
-  validates :recorded_date, :food_id, :tulle_id, :play_id, :poop_id, :pee_id, :cat_id, presence: true
-  validates :food_id, :tulle_id, :play_id, :poop_id, :pee_id, numericality: { other_than: 1 }
+  with_options presence: true do
+   validates :recorded_date, :food_id, :tulle_id, :play_id, :poop_id, :pee_id, :cat_id
+   validates :food_id, :tulle_id, :play_id, :poop_id, :pee_id, numericality: { other_than: 1 }
+  end
 end

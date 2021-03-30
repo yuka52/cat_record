@@ -4,8 +4,9 @@ class Cat < ApplicationRecord
   has_one_attached :image
   has_many :healths, dependent: :destroy
   belongs_to :user
-
-  validates :name, :birthday, :image, presence: true
-
-  validates :gender_id, numericality: { other_than: 1 }
+  
+  with_options presence: true do
+   validates :name, :birthday, :image
+   validates :gender_id, numericality: { other_than: 1 }
+  end
 end
