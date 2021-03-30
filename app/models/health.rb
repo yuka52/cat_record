@@ -6,6 +6,7 @@ class Health < ApplicationRecord
   belongs_to :poop
   belongs_to :pee
   belongs_to :cat
+  belongs_to :user
 
   with_options presence: true do
    validates :recorded_date, :food_id, :tulle_id, :play_id, :poop_id, :pee_id, :cat_id
