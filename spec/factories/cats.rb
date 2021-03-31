@@ -5,7 +5,6 @@ FactoryBot.define do
     favorite {'ねこじゃらし'}
     gender_id {Faker::Number.between(from: 2, to: 3)}
     association :user
-    association :health
 
     after(:build) do |cat|
       cat.image.attach(io: File.open('public/images/test_image.jpg'), filename: 'test_image.jpg')

@@ -47,7 +47,7 @@ RSpec.describe Cat, type: :model do
         expect(@cat.errors.full_messages).to include("Gender must be other than 1")
       end  
 
-      it 'ユーザーが紐付いていなければ保存できない' do
+      it 'userが紐付いていなければ保存できない' do
         @cat.user = nil
         @cat.valid?
         expect(@cat.errors.full_messages).to include("User must exist")
