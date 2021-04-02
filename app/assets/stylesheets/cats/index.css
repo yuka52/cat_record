@@ -1,6 +1,6 @@
 
 .cat-lists {
-  height: 100vh-100px;
+  height: calc(100%-100px);
 }
 
 .cat-list { 
