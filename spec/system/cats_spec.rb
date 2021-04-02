@@ -94,9 +94,9 @@ RSpec.describe '猫情報削除', type: :system do
   before do
     @cat1 = FactoryBot.create(:cat)
   end
-  context 'ツイート削除ができるとき' do
+  context '猫情報の削除ができるとき' do
     it 'ログインしたユーザーは自らが登録した猫情報の削除ができる' do
-      # ツイート1を投稿したユーザーでログインする
+      # cat1を投稿したユーザーでログインする
       visit new_user_session_path
       fill_in 'session_email', with: @cat1.user.email
       fill_in 'session_password', with: @cat1.user.password
