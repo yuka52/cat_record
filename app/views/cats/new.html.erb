@@ -17,7 +17,7 @@
         <p>
           クリックして写真をアップロード
         </p>
-        <%= f.file_field :image, class:"cat-image", id:"item-image" %>
+        <%= f.file_field :image, class:"cat-image" %>
       </div>
     </div>
     <%# /写真 %>
@@ -53,13 +53,13 @@
        性別
           <span class="indispensable">必須</span>
         </div>
-        <%= f.collection_select(:gender_id, Gender.all, :id, :name, {}, {class:"select-box", id:"item-category"}) %> 
+        <%= f.collection_select(:gender_id, Gender.all, :id, :name, {}, {class:"select-box"}) %> 
       </div>
     <div class="cat-favorite">
       <div class="weight-bold-text">
         好きなもの
       </div>
-      <%= f.text_field :favorite, class:"favorite-input", id:"item-price" %>
+      <%= f.text_field :favorite, class:"favorite-input" %>
     </div>    
     <%# /プロフィール %>
 
