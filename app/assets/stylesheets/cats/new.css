@@ -133,11 +133,11 @@
 /* /プロフィール */
 
 /* 下部ボタン */
-.sell-btn-contents {
+.registration-btn-contents {
   text-align: center;
 }
 
-.sell-btn {
+.registration-btn {
   background: #518d7e;
   border: 1px solid #518d7e;
   color: #fff;

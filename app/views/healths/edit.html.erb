@@ -65,8 +65,8 @@
     <input value=<%= @health.cat_id %> name="health[cat_id]" type="hidden"> 
     <%# /プロフィール %>
 
-    <div class="sell-btn-contents">
-      <%= f.submit "登録する" ,class:"sell-btn" %>
+    <div class="registration-btn-contents">
+      <%= f.submit "登録する" ,class:"registration-btn" %>
       <%=link_to 'もどる', cat_path(@health.cat_id), class:"back-btn" %>
     </div>
     <%# /下部ボタン %>
