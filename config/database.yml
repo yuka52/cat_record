@@ -50,5 +50,6 @@ test:
 production:
   <<: *default
   database: cat_record_production
-  username: cat_record
-  password: <%= ENV['CAT_RECORD_DATABASE_PASSWORD'] %>
+  username: root
+  password: <%= ENV['DATABASE_PASSWORD'] %>
+  socket: /var/lib/mysql/mysql.sock
